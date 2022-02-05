@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsable side bar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="pageContainer">
+        <nav class="nav">
+            <div class="nav__border"></div>
+            <a href="#" class="navLink">
+                <div class="navIconContainer">
+                    <i class="material-icons">dashboard</i>
+                </div>
+                <span class="navLabel">Dashboard</span>
+            </a>
+            <a href="#" class="navLink">
+                <div class="navIconContainer">
+                    <i class="material-icons">alarm</i>
+                </div>
+                <span class="navLabel">Alarm</span>
+            </a>
+            <a href="#" class="navLink">
+                <div class="navIconContainer">
+                    <i class="material-icons">extension</i>
+                </div>
+                <span class="navLabel">Plugins</span>
+            </a>
+            <a href="#" class="navLink">
+                <div class="navIconContainer">
+                    <i class="material-icons">power_settings_new</i>
+                </div>
+                <span class="navLabel">Log Off</span>
+            </a>
+        </nav>
+        <main class="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi deleniti ex, sed consectetur quis vitae
+                repellendus possimus autem tempora quod quas magni voluptatibus assumenda incidunt ducimus? Commodi illo
+                a numquam.
+                Ad, atque. Ratione accusamus doloribus expedita inventore esse quaerat magnam facilis magni eius, odit
+                id iste nisi nobis. Animi nihil hic veritatis! Nulla possimus corrupti nam vel nobis velit doloremque?
+                Facilis omnis quae eligendi error repellat atque dolore, autem magni itaque ullam impedit eos commodi
+                eum ex alias modi. Unde eaque consequuntur alias dolorum consectetur quam atque temporibus eius porro.
+                Accusantium blanditiis est minima accusamus! Ipsa laudantium nisi consectetur! Atque, nesciunt eligendi!
+                Repudiandae illum sit ipsam accusamus adipisci voluptates ab dolores fugiat quibusdam. Ipsam nulla quod,
+                animi laborum quidem deleniti.
+                Error commodi, omnis odit nihil cum excepturi. Voluptatem sunt sed quibusdam officia quae? Suscipit
+                libero tenetur nesciunt reiciendis expedita, ab aliquid atque tempore eveniet consectetur odit delectus
+                quam obcaecati officiis.
+                Ea necessitatibus dolorem exercitationem quasi, in nesciunt vitae est esse numquam vero consectetur nemo
+                voluptatem voluptatibus veritatis molestias eius magni animi cumque corporis nisi commodi, quis odit
+                perspiciatis ipsa? Porro?
+                Iste fuga, rem provident eveniet fugiat nulla sed sunt nisi, odio labore sint veritatis quae possimus
+                corporis in illo. Temporibus, magni dolore dolores natus hic facere aliquid ab possimus quibusdam.
+                Minima alias beatae odio fugiat voluptatibus quam veritatis quidem provident obcaecati nesciunt dolore
+                repudiandae, quibusdam nihil laboriosam! Minima ex odio quod eos modi aliquid fugit repellendus ducimus.
+                Maiores, cupiditate eligendi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis corrupti sequi sunt consequatur
+                reprehenderit? At aliquam consequatur ea quasi soluta, eaque veniam ut laudantium aspernatur odio
+                quisquam necessitatibus voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis corrupti sequi sunt consequatur
+                reprehenderit? At aliquam consequatur ea quasi soluta, eaque veniam ut laudantium aspernatur odio
+                quisquam necessitatibus voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis corrupti sequi sunt consequatur
+                reprehenderit? At aliquam consequatur ea quasi soluta, eaque veniam ut laudantium aspernatur odio
+                quisquam necessitatibus voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis corrupti sequi sunt consequatur
+                reprehenderit? At aliquam consequatur ea quasi soluta, eaque veniam ut laudantium aspernatur odio
+                quisquam necessitatibus voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis corrupti sequi sunt consequatur
+                reprehenderit? At aliquam consequatur ea quasi soluta, eaque veniam ut laudantium aspernatur odio
+                quisquam necessitatibus voluptatem.</p>
+        </main>
+    </div>
+</body>
+<script>
+    {
+        const nav = document.querySelector(".nav");
+        const navBorder = document.querySelector(".nav__border");
+
+        const collapsedClass = "nav--collapsed";
+        const lsKey = "navCollapsed";
+
+        if (localStorage.getItem(lsKey) === "true"){
+            nav.classList.add(collapsedClass)
+        }
+
+        navBorder.addEventListener("click", () => {
+            nav.classList.toggle(collapsedClass);
+            localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
+        });
+    }
+</script>
+
+</html>

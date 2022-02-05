@@ -1,0 +1,84 @@
+:root {
+    --nav-icon-width: 50px;
+    --nav-border-width: 8px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pageContainer{
+    /* inherits height from html and body */
+    height: inherit;
+    
+    display: flex;
+}
+
+.main{
+    height: inherit;
+
+    padding: 0;
+    padding-left: var(--nav-border-width);
+    
+    /* to enable the content to sroll when you do */
+    overflow-y: auto;
+
+    font-size: 2rem;
+}
+
+.nav{
+    width: 200px;
+    height: inherit;
+    position: relative;
+    background-color: #787878;
+    transition: width 250ms;
+    
+    /* so the width never changes when resizing */
+    flex-shrink: 0;
+}
+
+.nav--collapsed{
+    width: var(--nav-icon-width);
+}
+
+.nav--collapsed .navLabel {
+    display: none;
+}
+
+.navLink{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navLink:hover{
+    background-color: aquamarine;
+}
+
+.navIconContainer{
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav__border{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: var(--nav-border-width);
+    height: inherit;
+    background-color: #585858;
+    /* turns cursor into resize cursor */
+    cursor: ew-resize;
+}
+
+.nav__border:hover{
+    background-color: #282828;
+}
