@@ -7,3 +7,12 @@
 --color-lightGray: #585858;
 --color-lighterGray: #ddd;
 --color-seaGreen: #009579;
+
+## Backgrounds
+--bg-dark: #383838;
+--bg-light: #fbfbfb;
+--bg-black: #232323;
+
+## Misc.
+--border-outline: 5px dashed red;
+--boxshadows-outline: 10px 10px 5px 0px rgba(0,0,0,0.75);
